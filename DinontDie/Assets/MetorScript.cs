@@ -39,6 +39,7 @@ public class MetorScript : MonoBehaviour
         {
             Debug.Log("boom");
             colliderMeteor.enabled = true;
+            GameObject.Find("MainCamera").gameObject.GetComponent<BasicCameraFollow>().TriggerShake(Time.deltaTime);
             /*while (TriggerList.Count > 0)
             {
                 Destroy(TriggerList[0].transform.parent.gameObject);
