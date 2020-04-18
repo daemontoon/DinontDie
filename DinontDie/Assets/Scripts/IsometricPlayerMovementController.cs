@@ -20,6 +20,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
     public Vector2 randomVector = new Vector2(0, 0);
     public Vector2 currentPos = new Vector2(0, 0);
     public Vector2 movement;
+
+    public float randomNumber = 0f;
     private void Awake()
     {
         rbody = GetComponent<Rigidbody2D>();
@@ -65,17 +67,29 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
         
 
-        if (idleTimer > 3)
+        if (idleTimer > 1)
         {
-            randomDirection += new Vector2(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f));
+            if (randomDirection == new Vector2(0, 0))
+            {
+                randomDirection += new Vector2(Random.Range(-1f, 1f), Random.Range(-1, 1));
+            }
+
             randomVector = Vector2.ClampMagnitude(randomDirection, 1);
+
         }
         else
         {
             randomVector = new Vector2(0, 0);
         }
 
-        movement = inputVector2 * movementSpeed + randomVector * movementSpeed/100;
+        randomNumber = Random.Range(0, 100)+idleTimer*2;
+        if (randomNumber > 98)
+        {
+            randomDirection = new Vector2(0, 0);
+            idleTimer = 0;
+        }
+
+        movement = inputVector2 * movementSpeed + randomVector * movementSpeed;
 
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
         //isoRenderer.SetDirection(movement);

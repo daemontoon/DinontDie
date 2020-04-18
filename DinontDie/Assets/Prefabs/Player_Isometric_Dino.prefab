@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 3339481644051735613}
   - component: {fileID: 2112403039443468836}
   m_Layer: 0
-  m_Name: WitchRender
+  m_Name: DinoRender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3339481645326394339}
   m_Layer: 0
-  m_Name: Witch
+  m_Name: Dino
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -276,7 +276,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIvaleur: {fileID: 0}
   movementSpeed: 1
+  idleTimer: 0
   mousePos: {x: 0, y: 0}
   inputVector: {x: 0, y: 0}
   inputVector2: {x: 0, y: 0}
+  randomDirection: {x: 0, y: 0}
+  randomVector: {x: 0, y: 0}
   currentPos: {x: 0, y: 0}
+  movement: {x: 0, y: 0}
