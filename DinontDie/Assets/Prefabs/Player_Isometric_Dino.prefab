@@ -118,7 +118,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: -6482351456028324867, guid: f4813b9b536f2ea4a9a2d886f72afa78,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -284,3 +284,4 @@ MonoBehaviour:
   randomVector: {x: 0, y: 0}
   currentPos: {x: 0, y: 0}
   movement: {x: 0, y: 0}
+  randomNumber: 0
