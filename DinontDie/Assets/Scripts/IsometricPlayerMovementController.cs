@@ -71,7 +71,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
         {
             if (randomDirection == new Vector2(0, 0))
             {
-                randomDirection += new Vector2(Random.Range(-1f, 1f), Random.Range(-1, 1));
+                randomDirection += new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
             }
 
             randomVector = Vector2.ClampMagnitude(randomDirection, 1);
