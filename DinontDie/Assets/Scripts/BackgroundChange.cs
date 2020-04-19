@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BackgroundChange : MonoBehaviour
-{ }
+{ 
     public GameObject BackgroundPrehistoric;
     public GameObject BackgroundAntiquity;
     public GameObject BackgroundMedieval;
     public GameObject BackgroundRenaissance;
     public GameObject BackgroundModernTimes;
     public GameObject BackgroundFuture;
-{
+
     void Start()
     {
         
@@ -24,7 +24,7 @@ public class BackgroundChange : MonoBehaviour
 
 
     }
-
+    /*
     void Update()
     
     {
@@ -56,9 +56,9 @@ public class BackgroundChange : MonoBehaviour
 
     Debug.Log("Bravo tu as gagné mdr");
     yield return new WaitForSeconds(2);
-}
+}*/
 
 
 
 }
-}
+

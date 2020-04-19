@@ -10,7 +10,7 @@ public GameObject BackgroundMedieval;
 public GameObject BackgroundRenaissance;
 public GameObject BackgroundModernTimes;
 public GameObject BackgroundFuture;
-{
+
     void Start()
 {
 
@@ -24,7 +24,7 @@ public GameObject BackgroundFuture;
 
 
 }
-
+    /*
     void Update()
 
     {
@@ -56,5 +56,5 @@ public GameObject BackgroundFuture;
 
         Debug.Log("Bravo tu as gagné mdr");
         yield return new WaitForSeconds(2);
-    }
+    }*/
 }

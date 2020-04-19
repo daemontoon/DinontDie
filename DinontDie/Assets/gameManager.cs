@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class gameManager : MonoBehaviour
 {
@@ -19,15 +20,63 @@ public class gameManager : MonoBehaviour
 
     public Slider barre;
 
+    public TMP_Text textAnnee;
+
+
+    public float annee = -150000000;
+    public float time = 0;
+    public int eraDuration;
+    int eraNow = 0;
+    public string[] eras = new string[] { "Pré-histoire", "Antiquité", "Moyen-âge", "Renaissance", "Temps modernes", "Futur" };
+    public int startAnnee = -150000000;
+    public int[] erasTime = new int[] { -5000, 250, 1450, 1780, 2020, 150000000 };
+
     // Start is called before the first frame update
     void Start()
     {
         energy = maxEnergy;
+
     }
 
     // Update is called once per frame
+    private void Update()
+    {
+        time += Time.deltaTime;
+        annee = Mathf.Round(startAnnee + (time/eraDuration) * (erasTime[eraNow] - startAnnee) ) ;
+
+        if (annee < -10000)
+        {
+            textAnnee.text = "Year " + System.Math.Round(-annee / 1000000f).ToString() + " 000 000 B.C.";
+        }
+        else if ( annee > 10000 )
+        {
+            textAnnee.text = "Year " + System.Math.Round(annee / 1000000f).ToString() + "M";
+        }
+
+        else if (annee >= -100 && annee <= 100)
+        {
+            textAnnee.text = "Year " + System.Math.Round(annee / 10f).ToString() + "0";
+        }
+        else
+        {
+            textAnnee.text = "Year " + System.Math.Round(annee / 100f).ToString()+"00";
+        }
+
+
+        if (time >= eraDuration)
+        {
+
+            time = 0;
+            startAnnee = erasTime[eraNow];
+            eraNow++;
+            Debug.Log(eras[eraNow]);
+
+        }
+    }
     void FixedUpdate()
     {
+
+
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButtonDown(1))
         {

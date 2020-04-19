@@ -8,12 +8,18 @@ public class VolcanScript : MonoBehaviour
     Animator animLava;
     CapsuleCollider2D colliderVolcan;
     CircleCollider2D colliderVolcanBig;
+    PolygonCollider2D colliderLave;
+    SpriteRenderer spriteVolcan;
+    SpriteRenderer spriteLava;
     float countBig = 0f;
 
     void Awake()
     {
+        spriteVolcan = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        spriteLava = transform.GetChild(1).GetComponent<SpriteRenderer>();
         animVolcan = transform.GetChild(0).GetComponent<Animator>();
         animLava = transform.GetChild(1).GetComponent<Animator>();
+        colliderLave = GetComponent<PolygonCollider2D>();
         colliderVolcan = GetComponent<CapsuleCollider2D>();
         colliderVolcanBig = GetComponent<CircleCollider2D>();
         colliderVolcan.enabled = !colliderVolcan.enabled;
@@ -50,6 +56,8 @@ public class VolcanScript : MonoBehaviour
         if (animVolcan.GetCurrentAnimatorStateInfo(0).IsName("VolcanIdle"))
             {
             animLava.SetBool("go", true);
+            spriteVolcan.sortingOrder = 0;
+            spriteLava.sortingOrder = 1;
 
         }
 
@@ -62,7 +70,7 @@ public class VolcanScript : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        // if (animVolcan.GetCurrentAnimatorStateInfo(0).IsName("VolcanRise")) Destroy(collision.collider.gameObject.transform.parent.gameObject);
+        if (animLava.GetCurrentAnimatorStateInfo(0).IsName("LavaFin")) Destroy(collision.collider.gameObject.transform.parent.gameObject);
 
     }
 }
