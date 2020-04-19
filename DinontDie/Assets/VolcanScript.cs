@@ -5,13 +5,15 @@ using UnityEngine;
 public class VolcanScript : MonoBehaviour
 {
     Animator animVolcan;
+    Animator animLava;
     CapsuleCollider2D colliderVolcan;
     CircleCollider2D colliderVolcanBig;
     float countBig = 0f;
 
     void Awake()
     {
-        animVolcan = gameObject.transform.GetComponentInChildren<Animator>();
+        animVolcan = transform.GetChild(0).GetComponent<Animator>();
+        animLava = transform.GetChild(1).GetComponent<Animator>();
         colliderVolcan = GetComponent<CapsuleCollider2D>();
         colliderVolcanBig = GetComponent<CircleCollider2D>();
         colliderVolcan.enabled = !colliderVolcan.enabled;
@@ -43,6 +45,11 @@ public class VolcanScript : MonoBehaviour
                 colliderVolcan.enabled = true;
                 colliderVolcanBig.enabled = false;
             }
+
+        }
+        if (animVolcan.GetCurrentAnimatorStateInfo(0).IsName("VolcanIdle"))
+            {
+            animLava.SetBool("go", true);
 
         }
 
