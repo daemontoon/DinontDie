@@ -26,6 +26,7 @@ public class gameManager : MonoBehaviour
     public Slider barre;
 
     public TMP_Text textAnnee;
+    public bool Menu;
 
 
     public float annee = -150000000;
@@ -42,8 +43,12 @@ public class gameManager : MonoBehaviour
     void Start()
     {
         energy = maxEnergy;
-        freqMeteor = eraMeteor[eraNow];
-        freqVolcan = eraVolcan[eraNow];
+        if (!Menu)
+        {
+            freqMeteor = eraMeteor[eraNow];
+            freqVolcan = eraVolcan[eraNow];
+        }
+
 
     }
 
