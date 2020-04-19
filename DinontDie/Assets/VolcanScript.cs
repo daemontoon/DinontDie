@@ -24,6 +24,7 @@ public class VolcanScript : MonoBehaviour
         colliderVolcanBig = GetComponent<CircleCollider2D>();
         colliderVolcan.enabled = !colliderVolcan.enabled;
         colliderVolcanBig.enabled = !colliderVolcanBig.enabled;
+        FindObjectOfType<AudioManager>().Play("Volcano");
     }
 
 
@@ -40,7 +41,7 @@ public class VolcanScript : MonoBehaviour
         if (animVolcan.GetCurrentAnimatorStateInfo(0).IsName("VolcanRise"))
         {
 
-
+         
             colliderVolcanBig.enabled = true;
             if (colliderVolcanBig.radius < 1.5)
             {
@@ -71,8 +72,10 @@ public class VolcanScript : MonoBehaviour
     void OnCollisionStay2D(Collision2D collision)
     {
         if (animLava.GetCurrentAnimatorStateInfo(0).IsName("LavaFin")) Destroy(collision.collider.gameObject.transform.parent.gameObject);
+        FindObjectOfType<AudioManager>().Play("PlayerDeath");
 
     }
+
 }
 
 

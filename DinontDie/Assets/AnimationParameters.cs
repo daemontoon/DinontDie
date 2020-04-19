@@ -24,6 +24,7 @@ public class AnimationParameters : MonoBehaviour
         if (movementValue != new Vector2(0,0))
         { 
             isMoving = true;
+            FindObjectOfType<AudioManager>().Play("Stomping");
         }
         else
         {
@@ -39,6 +40,8 @@ public class AnimationParameters : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
+
+       
     }
 
 }

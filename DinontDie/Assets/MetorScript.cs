@@ -15,6 +15,7 @@ public class MetorScript : MonoBehaviour
         spriteMeteor.sortingLayerName = "Foreground";
         colliderMeteor = GetComponent<CapsuleCollider2D>();
         colliderMeteor.enabled = !colliderMeteor.enabled;
+        FindObjectOfType<AudioManager>().Play("MeteorCrash");
     }
 
     /* private void OnTriggerEnter2D(Collider2D other)
@@ -41,7 +42,7 @@ public class MetorScript : MonoBehaviour
         if (animMeteor.GetCurrentAnimatorStateInfo(0).IsName("MeteorCrash"))
 
         {
-            FindObjectOfType<AudioManager>().Play("MeteorCrash");
+            
             Debug.Log("layer" + spriteMeteor.sortingLayerName);
             spriteMeteor.sortingLayerName = "Default";
 
