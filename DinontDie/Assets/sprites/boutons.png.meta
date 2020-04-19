@@ -1,0 +1,431 @@
+fileFormatVersion: 2
+guid: 8d3773ab5f6536745992217dfa97e2a7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1696419942426415765
+    second: boutons_0
+  - first:
+      213: 3247696489281138636
+    second: boutons_1
+  - first:
+      213: -575778569507315352
+    second: boutons_2
+  - first:
+      213: 665786174371915863
+    second: boutons_3
+  - first:
+      213: -6563459027249768043
+    second: boutons_4
+  - first:
+      213: -4139274538482826661
+    second: boutons_5
+  - first:
+      213: 7206569496982422459
+    second: boutons_6
+  - first:
+      213: 3718687776127035791
+    second: boutons_7
+  - first:
+      213: 2296792133674398177
+    second: boutons_8
+  - first:
+      213: -8414555577000013175
+    second: boutons_9
+  - first:
+      213: 58465956482638172
+    second: boutons_10
+  - first:
+      213: 6111527900992512705
+    second: boutons_11
+  - first:
+      213: 4119746534318731649
+    second: boutons_12
+  - first:
+      213: 5009887939964263305
+    second: boutons_13
+  - first:
+      213: -8897632726445138586
+    second: boutons_14
+  - first:
+      213: -5819946879074085167
+    second: boutons_15
+  - first:
+      213: -4692939023998901865
+    second: boutons_16
+  - first:
+      213: 2740698147246366855
+    second: boutons_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boutons_0
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2634
+        width: 1002
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6de8c5ec0b1578e0800000000000000
+      internalID: -1696419942426415765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boutons_6
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 2335
+        width: 363
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb38dc486c0e20460800000000000000
+      internalID: 7206569496982422459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boutons_7
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 2104
+        width: 363
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89a3a674de6b9330800000000000000
+      internalID: 3718687776127035791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boutons_8
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1915
+        width: 380
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1f292d648dfdf10800000000000000
+      internalID: 2296792133674398177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boutons_9
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1726
+        width: 380
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982d122f84e793b80800000000000000
+      internalID: -8414555577000013175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boutons_10
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1531
+        width: 342
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51e9974a76bfc000800000000000000
+      internalID: 58465956482638172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boutons_11
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1336
+        width: 342
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c22c85ee3280d450800000000000000
+      internalID: 6111527900992512705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boutons_12
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1158
+        width: 241
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181f6b645a74c2930800000000000000
+      internalID: 4119746534318731649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boutons_13
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 992
+        width: 241
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b5512b982b68540800000000000000
+      internalID: 5009887939964263305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boutons_14
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 821
+        width: 241
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66dd85e4d22458480800000000000000
+      internalID: -8897632726445138586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boutons_15
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 651
+        width: 241
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6552d16256b3fa0800000000000000
+      internalID: -5819946879074085167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boutons_16
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 388
+        width: 542
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7912af962d45fdeb0800000000000000
+      internalID: -4692939023998901865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boutons_17
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 153
+        width: 542
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780e03fa17ae80620800000000000000
+      internalID: 2740698147246366855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

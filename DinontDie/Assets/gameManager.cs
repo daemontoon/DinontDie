@@ -31,8 +31,10 @@ public class gameManager : MonoBehaviour
     public float annee = -150000000;
     public float time = 0;
     public int eraDuration;
-    int eraNow = 0;
+    public int eraNow = 0;
     string[] eras = new string[] { "Prehistory", "Ancient history", "Middle Ages", "Renaissance", "Modern Times", "Future" };
+    float[] eraMeteor = new float[] { 5,11,8,5,3,2};
+    float[] eraVolcan = new float[] { 10,7,8,6,5,3.5f};
     public int startAnnee = -150000000;
     public int[] erasTime = new int[] { -5000, 250, 1450, 1780, 2020, 150000000 };
 
@@ -40,6 +42,8 @@ public class gameManager : MonoBehaviour
     void Start()
     {
         energy = maxEnergy;
+        freqMeteor = eraMeteor[eraNow];
+        freqVolcan = eraVolcan[eraNow];
 
     }
 
@@ -78,6 +82,9 @@ public class gameManager : MonoBehaviour
             GameObject temps;
             temps = GameObject.Find("LevelMenu");
             temps.GetComponent<ChangeLevel>().changeLevel(eras[eraNow]);
+            freqMeteor = eraMeteor[eraNow];
+            freqVolcan = eraVolcan[eraNow];
+                
 
         }
     }

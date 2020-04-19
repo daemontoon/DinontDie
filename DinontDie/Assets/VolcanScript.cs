@@ -70,7 +70,10 @@ public class VolcanScript : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (animLava.GetCurrentAnimatorStateInfo(0).IsName("LavaFin")) Destroy(collision.collider.gameObject.transform.parent.gameObject);
+        if (animLava.GetCurrentAnimatorStateInfo(0).IsName("LavaFin"))
+        {
+            collision.collider.gameObject.transform.parent.gameObject.GetComponent<IsometricPlayerMovementController>().Mourrir();
+        }
 
     }
 }

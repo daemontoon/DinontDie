@@ -59,7 +59,10 @@ public class MetorScript : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (animMeteor.GetCurrentAnimatorStateInfo(0).IsName("MeteorCrash")) Destroy(collision.collider.gameObject.transform.parent.gameObject);
+        if (animMeteor.GetCurrentAnimatorStateInfo(0).IsName("MeteorCrash"))
+        {
+            collision.collider.gameObject.transform.parent.gameObject.GetComponent<IsometricPlayerMovementController>().Mourrir();
+        }
        // FindObjectOfType<AudioManager>().Play("PlayerDeath");
 
 

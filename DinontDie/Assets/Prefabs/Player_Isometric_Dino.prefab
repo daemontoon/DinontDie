@@ -141,7 +141,7 @@ Animator:
   m_GameObject: {fileID: 3339481644051735610}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 96400a5b745e640bbbdd72763b2beb38, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7bec7fa48822c75488414e510b035131, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIvaleur: {fileID: 0}
-  movementSpeed: 1
+  movementSpeed: 1.5
   idleTimer: 0
   independance: 2
   mousePos: {x: 0, y: 0}
@@ -285,4 +285,5 @@ MonoBehaviour:
   randomVector: {x: 0, y: 0}
   currentPos: {x: 0, y: 0}
   movement: {x: 0, y: 0}
+  animDino: {fileID: 3339481644051735613}
   randomNumber: 0

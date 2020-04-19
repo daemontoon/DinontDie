@@ -21,6 +21,9 @@ public class IsometricPlayerMovementController : MonoBehaviour
     public Vector2 currentPos = new Vector2(0, 0);
     public Vector2 movement;
 
+    public Animator animDino;
+
+    bool isdying;
     float energy;
 
     public float randomNumber = 0f;
@@ -89,5 +92,18 @@ public class IsometricPlayerMovementController : MonoBehaviour
         //isoRenderer.SetDirection(movement);
         
         rbody.MovePosition(newPos);
+
+        if (isdying)
+        {
+            if (animDino.GetCurrentAnimatorStateInfo(0).IsName("Nodino"))
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+    public void Mourrir()
+    {
+        isdying = true;
+        animDino.SetBool("dead", true);
     }
 }
