@@ -66,13 +66,4 @@ public class MetorScript : MonoBehaviour
     }
 
 
-
-    //  
-    IEnumerator MeteorSound;
-    {
-
-    FindObjectOfType<AudioManager>().Play("MeteorCrash");
-    yield return new WaitForEndOfFrame();
-}
-
 }

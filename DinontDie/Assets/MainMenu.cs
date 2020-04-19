@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame ()
     {
-        SceneManager.LoadScene("LevelPrehistoric");
+        SceneManager.LoadScene("AudioTests2");
     }
     public void QuitGame ()
     {
