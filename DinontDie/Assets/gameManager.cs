@@ -7,8 +7,12 @@ using TMPro;
 public class gameManager : MonoBehaviour
 {
     public GameObject meteorPrefab;
+    public GameObject volcanPrefab;
     public float meteorCounter = 0;
+    public float volcanCounter = 0;
     public float freqMeteor;
+    public float freqVolcan;
+
     float horizontalInput;
     float verticalInput;
     public Vector2 inputVector = new Vector2(0, 0);
@@ -77,7 +81,7 @@ public class gameManager : MonoBehaviour
     {
 
 
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = Camera.current.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButtonDown(1))
         {
             
@@ -108,10 +112,16 @@ public class gameManager : MonoBehaviour
 
         }
         meteorCounter += Time.deltaTime;
+        volcanCounter += Time.deltaTime;
         if (meteorCounter > freqMeteor)
         {
             InvokeMeteor();
             meteorCounter = 0f;
+        }
+        if (volcanCounter > freqVolcan)
+        {
+            InvokeVolcan();
+            volcanCounter = 0f;
         }
 
         if (energy < 0) energy = 0;
@@ -122,5 +132,10 @@ public class gameManager : MonoBehaviour
     {
         Vector2 randomPos = new Vector2(Random.Range(-8.5f, 8.5f), Random.Range(-4f, 3.5f));
         Instantiate(meteorPrefab, new Vector3(randomPos.x, randomPos.y, 0), Quaternion.identity);
+    }
+    void InvokeVolcan()
+    {
+        Vector2 randomPos = new Vector2(Random.Range(-8.5f, 8.5f), Random.Range(-4f, 3.5f));
+        Instantiate(volcanPrefab, new Vector3(randomPos.x, randomPos.y, 0), Quaternion.identity);
     }
 }
