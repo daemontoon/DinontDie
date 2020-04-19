@@ -6,6 +6,7 @@ using TMPro;
 
 public class gameManager : MonoBehaviour
 {
+    public Camera cam;
     public GameObject meteorPrefab;
     public GameObject volcanPrefab;
     public float meteorCounter = 0;
@@ -31,7 +32,7 @@ public class gameManager : MonoBehaviour
     public float time = 0;
     public int eraDuration;
     int eraNow = 0;
-    public string[] eras = new string[] { "Pré-histoire", "Antiquité", "Moyen-âge", "Renaissance", "Temps modernes", "Futur" };
+    public string[] eras = new string[] { "Prehistory", "Ancient history", "Middle Ages", "Renaissance", "Modern Times", "Future" };
     public int startAnnee = -150000000;
     public int[] erasTime = new int[] { -5000, 250, 1450, 1780, 2020, 150000000 };
 
@@ -81,7 +82,7 @@ public class gameManager : MonoBehaviour
     {
 
 
-        mousePos = Camera.current.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButtonDown(1))
         {
             

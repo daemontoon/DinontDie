@@ -44,7 +44,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
         if (Input.GetMouseButton(0) == false || energy <= 0)
         {
             inputVector2 = new Vector2(0, 0);
-            Debug.Log("appuyé");
         }
 
 
