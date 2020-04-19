@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class test : MonoBehaviour
 { 
 public GameObject BackgroundPrehistoric;
@@ -57,4 +57,4 @@ public GameObject BackgroundFuture;
         Debug.Log("Bravo tu as gagné mdr");
         yield return new WaitForSeconds(2);
     }
-}
+}*/

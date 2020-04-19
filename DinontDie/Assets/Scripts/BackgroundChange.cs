@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
 public class BackgroundChange : MonoBehaviour
 { }
     public GameObject BackgroundPrehistoric;
@@ -62,3 +63,4 @@ public class BackgroundChange : MonoBehaviour
 
 }
 }
+*/
