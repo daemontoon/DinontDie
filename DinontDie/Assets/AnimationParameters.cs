@@ -29,7 +29,7 @@ public class AnimationParameters : MonoBehaviour
         if (movementValue != new Vector2(0,0))
         { 
             isMoving = true;
-            FindObjectOfType<AudioManager>().Play("Stomping");
+          //  FindObjectOfType<AudioManager>().Play("Stomping");
         }
         else
         {

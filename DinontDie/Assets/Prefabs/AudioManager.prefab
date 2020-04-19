@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2699050450254625985}
-  - component: {fileID: 2699050450254625984}
+  - component: {fileID: 7134470146074682177}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2699050450254625984
+--- !u!114 &7134470146074682177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,37 +40,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 2699050450254625999}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f45edda3f186f04ba531560fd2f6291, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bb4ff19641f1d84bb1a9b908388e013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
   - name: PlayerDeath
     clip: {fileID: 8300000, guid: 672b2966f26715a4b9d38fe907df1997, type: 3}
-    volume: 0.636
-    pitch: 0.93
-    loop: 0
-    source: {fileID: 0}
-  - name: TitleTheme
-    clip: {fileID: 8300000, guid: 5d344a39900c9164b97ffbcf270648fc, type: 3}
-    volume: 0.278
-    pitch: 3
-    loop: 1
-    source: {fileID: 0}
-  - name: LevelTheme
-    clip: {fileID: 0}
-    volume: 0.278
-    pitch: 0.93
+    volume: 0.303
+    pitch: 1.68
     loop: 0
     source: {fileID: 0}
   - name: MeteorCrash
     clip: {fileID: 8300000, guid: 3ae0d1992ebe95343b46f876e4d9066f, type: 3}
-    volume: 0.483
-    pitch: 0.93
+    volume: 0.526
+    pitch: 1.6
     loop: 0
     source: {fileID: 0}
   - name: Volcano
     clip: {fileID: 8300000, guid: a481d46aef1a7f5439c53badcc5e5530, type: 3}
-    volume: 0.498
-    pitch: 0.93
+    volume: 0.513
+    pitch: 1.6
+    loop: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
     loop: 0
     source: {fileID: 0}

@@ -42,11 +42,8 @@ public class MetorScript : MonoBehaviour
         if (animMeteor.GetCurrentAnimatorStateInfo(0).IsName("MeteorCrash"))
 
         {
-<<<<<<< HEAD
-            
-=======
-            /*FindObjectOfType<AudioManager>().Play("MeteorCrash");*/
->>>>>>> 2dab5bd5208f415e31f368790dd893a571112ebf
+            //FindObjectOfType<AudioManager>().Play("MeteorCrash");
+
             Debug.Log("layer" + spriteMeteor.sortingLayerName);
             spriteMeteor.sortingLayerName = "Default";
 
@@ -66,9 +63,10 @@ public class MetorScript : MonoBehaviour
     {
         if (animMeteor.GetCurrentAnimatorStateInfo(0).IsName("MeteorCrash"))
         {
+           
             collision.collider.gameObject.transform.parent.gameObject.GetComponent<IsometricPlayerMovementController>().Mourrir();
         }
-       // FindObjectOfType<AudioManager>().Play("PlayerDeath");
+       FindObjectOfType<AudioManager>().Play("PlayerDeath");
 
 
     }
