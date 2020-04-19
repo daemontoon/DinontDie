@@ -11,7 +11,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
     IsometricCharacterRenderer isoRenderer;
     public float idleTimer;
     Rigidbody2D rbody;
-
+    public float independance = 1f;
 
     public Vector2 mousePos = new Vector2(0, 0);
     public Vector2 inputVector = new Vector2(0, 0);
@@ -20,6 +20,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
     public Vector2 randomVector = new Vector2(0, 0);
     public Vector2 currentPos = new Vector2(0, 0);
     public Vector2 movement;
+
+    float energy;
 
     public float randomNumber = 0f;
     private void Awake()
@@ -33,19 +35,13 @@ public class IsometricPlayerMovementController : MonoBehaviour
     void FixedUpdate()
     {
 
-
+        energy = GameObject.Find("GameManager").GetComponent<gameManager>().energy;
         currentPos = rbody.position;
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        inputVector2 = GameObject.Find("GameManager").GetComponent<gameManager>().inputVector;
+        inputVector2 = inputVector2 - currentPos;
+        inputVector2 = Vector2.ClampMagnitude(inputVector2, 1);
 
-
-            inputVector2 = new Vector2(mousePos.x, mousePos.y);
-            inputVector2 = inputVector2 - currentPos;
-            inputVector2 = Vector2.ClampMagnitude(inputVector2, 1);
-
-
-        if (Input.GetMouseButton(0) == false)
+        if (Input.GetMouseButton(0) == false || energy <= 0)
         {
             inputVector2 = new Vector2(0, 0);
             Debug.Log("appuyé");
@@ -54,7 +50,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
         if (inputVector2 == new Vector2(0,0))
         {
-            idleTimer += Time.deltaTime;
+            idleTimer += Time.deltaTime*independance;
         }
         else
         {
@@ -62,8 +58,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
         }
 
        
-        inputVector = new Vector2(horizontalInput, verticalInput);
-        inputVector = Vector2.ClampMagnitude(inputVector, 1);
+
 
         
 

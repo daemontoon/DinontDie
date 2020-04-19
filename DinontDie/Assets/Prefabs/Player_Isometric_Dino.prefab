@@ -277,6 +277,7 @@ MonoBehaviour:
   UIvaleur: {fileID: 0}
   movementSpeed: 1
   idleTimer: 0
+  independance: 2
   mousePos: {x: 0, y: 0}
   inputVector: {x: 0, y: 0}
   inputVector2: {x: 0, y: 0}

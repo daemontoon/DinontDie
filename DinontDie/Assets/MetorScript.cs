@@ -5,11 +5,14 @@ using UnityEngine;
 public class MetorScript : MonoBehaviour
 {
     Animator animMeteor;
+    SpriteRenderer spriteMeteor;
     CapsuleCollider2D colliderMeteor;
     List<GameObject> TriggerList = new List<GameObject>();
     void Awake()
     {
         animMeteor = gameObject.transform.GetComponentInChildren<Animator>();
+        spriteMeteor = gameObject.transform.GetComponentInChildren<SpriteRenderer>();
+        spriteMeteor.sortingLayerName = "Foreground";
         colliderMeteor = GetComponent<CapsuleCollider2D>();
         colliderMeteor.enabled = !colliderMeteor.enabled;
     }
@@ -37,7 +40,10 @@ public class MetorScript : MonoBehaviour
         //Debug.Log("compte = " + TriggerList.Count);
         if (animMeteor.GetCurrentAnimatorStateInfo(0).IsName("MeteorCrash"))
         {
-            Debug.Log("boom");
+
+            Debug.Log("layer" +spriteMeteor.sortingLayerName);
+            spriteMeteor.sortingLayerName = "Default";
+
             colliderMeteor.enabled = true;
  
             /*while (TriggerList.Count > 0)

@@ -391,7 +391,7 @@ namespace UnityEditor
 				return;
 
 			GameObject instance = null;
-			if (PrefabUtility.GetPrefabType(go) == PrefabType.Prefab)
+			/*if (PrefabUtility.GetPrefabType(go) == PrefabType.Prefab)
 			{
 				instance = (GameObject) PrefabUtility.InstantiatePrefab(go);
 			}
@@ -400,7 +400,7 @@ namespace UnityEditor
 				instance = Instantiate(go);
 				instance.hideFlags = HideFlags.None;
 				instance.name = go.name;
-			}
+			}*/
 
 			Undo.RegisterCreatedObjectUndo(instance, "Paint GameObject");
 			instance.transform.SetParent(parent);
