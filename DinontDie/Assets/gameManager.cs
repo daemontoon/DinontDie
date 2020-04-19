@@ -32,7 +32,7 @@ public class gameManager : MonoBehaviour
     public float time = 0;
     public int eraDuration;
     int eraNow = 0;
-    public string[] eras = new string[] { "Prehistory", "Ancient history", "Middle Ages", "Renaissance", "Modern Times", "Future" };
+    string[] eras = new string[] { "Prehistory", "Ancient history", "Middle Ages", "Renaissance", "Modern Times", "Future" };
     public int startAnnee = -150000000;
     public int[] erasTime = new int[] { -5000, 250, 1450, 1780, 2020, 150000000 };
 
@@ -75,6 +75,9 @@ public class gameManager : MonoBehaviour
             startAnnee = erasTime[eraNow];
             eraNow++;
             Debug.Log(eras[eraNow]);
+            GameObject temps;
+            temps = GameObject.Find("LevelMenu");
+            temps.GetComponent<ChangeLevel>().changeLevel(eras[eraNow]);
 
         }
     }

@@ -1,18 +1,66 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ChangeLevel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static bool levelChanging = false;
+    public GameObject pauseMenuUI;
+    public TMP_Text titreEpoque;
 
     // Update is called once per frame
+
+
     void Update()
     {
-        
+        if (Input.GetKeyDown("o"))
+        {
+            if (levelChanging) Resume();
+        }
+
+    }
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        levelChanging = false;
+    }
+
+    void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        levelChanging = true;
+    }
+    public void LoadMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("TitleScreen");
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
+
+    }
+    void DestroyAll(string tag)
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(tag);
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            Destroy(enemies[i]);
+        }
+    }
+
+    public void changeLevel(string numero)
+    {
+
+        Debug.Log("LOL");
+        titreEpoque.SetText(numero);
+        DestroyAll("Meteor");
+        DestroyAll("Volcan");
+        Pause();
+
     }
 }
