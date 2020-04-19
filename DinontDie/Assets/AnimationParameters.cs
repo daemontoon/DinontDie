@@ -9,9 +9,12 @@ public class AnimationParameters : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Vector2 movementValue;
     public bool isMoving;
+    int era;
+
     // Start is called before the first frame update
     private void Start()
     {
+   
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -19,6 +22,8 @@ public class AnimationParameters : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        era = GameObject.Find("GameManager").GetComponent<gameManager>().eraNow;
+        animator.SetInteger("era", era);
         movementValue = perso.GetComponent<IsometricPlayerMovementController>().movement;
 
         if (movementValue != new Vector2(0,0))
@@ -32,13 +37,16 @@ public class AnimationParameters : MonoBehaviour
         }
         animator.SetBool("isMoving", isMoving);
 
+
         if (movementValue.x > 0)
         {
+
             spriteRenderer.flipX = true;
         }
         else if (movementValue.x < 0)
         {
             spriteRenderer.flipX = false;
+
         }
 
        
