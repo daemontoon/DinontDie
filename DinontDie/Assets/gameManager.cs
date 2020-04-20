@@ -63,11 +63,11 @@ public class gameManager : MonoBehaviour
 
         if (annee < -10000)
         {
-            textAnnee.text = "Year " + System.Math.Round(-annee / 1000000f).ToString() + " 000 000 B.C.";
+            textAnnee.text = "Year " + System.Math.Round(-annee / 1000000f).ToString() + "M B.C.";
         }
         else if ( annee > 10000 )
         {
-            textAnnee.text = "Year " + System.Math.Round(annee / 1000000f).ToString() + "M";
+            textAnnee.text = "Year " + System.Math.Round(annee / 1000000f).ToString() + "M A.C.";
         }
 
         else if (annee >= -100 && annee <= 100)

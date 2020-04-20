@@ -25,7 +25,7 @@ public class Size : MonoBehaviour
         get
         {
             Vector2 topRightCorner = new Vector2(1, 1);
-            Vector2 edgeVector = Camera.main.ViewportToWorldPoint(topRightCorner);
+            Vector2 edgeVector = Camera.current.ViewportToWorldPoint(topRightCorner);
             var height = edgeVector.y * 2;
             return height;
         }
@@ -35,7 +35,7 @@ public class Size : MonoBehaviour
         get
         {
             Vector2 topRightCorner = new Vector2(1, 1);
-            Vector2 edgeVector = Camera.main.ViewportToWorldPoint(topRightCorner);
+            Vector2 edgeVector = Camera.current.ViewportToWorldPoint(topRightCorner);
             var width = edgeVector.x * 2;
             return width;
         }
