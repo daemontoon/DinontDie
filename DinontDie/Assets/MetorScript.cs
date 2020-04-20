@@ -13,9 +13,10 @@ public class MetorScript : MonoBehaviour
         animMeteor = gameObject.transform.GetComponentInChildren<Animator>();
         spriteMeteor = gameObject.transform.GetComponentInChildren<SpriteRenderer>();
         spriteMeteor.sortingLayerName = "Foreground";
+        spriteMeteor.sortingOrder = 3;
         colliderMeteor = GetComponent<CapsuleCollider2D>();
         colliderMeteor.enabled = !colliderMeteor.enabled;
-        FindObjectOfType<AudioManager>().Play("MeteorCrash");
+      //  FindObjectOfType<AudioManager>().Play("MeteorCrash");
     }
 
     /* private void OnTriggerEnter2D(Collider2D other)
@@ -45,7 +46,7 @@ public class MetorScript : MonoBehaviour
             //FindObjectOfType<AudioManager>().Play("MeteorCrash");
 
             Debug.Log("layer" + spriteMeteor.sortingLayerName);
-            spriteMeteor.sortingLayerName = "Default";
+            spriteMeteor.sortingOrder = 0;
 
 
             colliderMeteor.enabled = true;
@@ -66,7 +67,7 @@ public class MetorScript : MonoBehaviour
            
             collision.collider.gameObject.transform.parent.gameObject.GetComponent<IsometricPlayerMovementController>().Mourrir();
         }
-       FindObjectOfType<AudioManager>().Play("PlayerDeath");
+       //FindObjectOfType<AudioManager>().Play("PlayerDeath");
 
 
     }

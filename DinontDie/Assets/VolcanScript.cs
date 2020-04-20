@@ -57,8 +57,8 @@ public class VolcanScript : MonoBehaviour
         if (animVolcan.GetCurrentAnimatorStateInfo(0).IsName("VolcanIdle"))
             {
             animLava.SetBool("go", true);
-            spriteVolcan.sortingOrder = 0;
-            spriteLava.sortingOrder = 1;
+            spriteVolcan.sortingOrder = -1;
+            spriteLava.sortingOrder = 0;
 
         }
 

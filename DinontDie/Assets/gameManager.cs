@@ -34,10 +34,11 @@ public class gameManager : MonoBehaviour
     public int eraDuration;
     public int eraNow = 0;
     string[] eras = new string[] { "Prehistory", "Ancient history", "Middle Ages", "Renaissance", "Modern Times", "Future" };
-    float[] eraMeteor = new float[] { 5,11,8,5,3,2};
+    float[] eraMeteor = new float[] { 5,8,6,4,2,1};
     float[] eraVolcan = new float[] { 10,7,8,6,5,3.5f};
     public int startAnnee = -150000000;
     public int[] erasTime = new int[] { -5000, 250, 1450, 1780, 2020, 150000000 };
+    public bool win = false;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +56,8 @@ public class gameManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (!Menu && !win)
+        { 
         time += Time.deltaTime;
         annee = Mathf.Round(startAnnee + (time/eraDuration) * (erasTime[eraNow] - startAnnee) ) ;
 
@@ -83,14 +86,19 @@ public class gameManager : MonoBehaviour
             time = 0;
             startAnnee = erasTime[eraNow];
             eraNow++;
-            Debug.Log(eras[eraNow]);
+                if (eraNow == 6) win = true;
+            if (!win)
+                { 
+                    Debug.Log(eras[eraNow]);
             GameObject temps;
             temps = GameObject.Find("LevelMenu");
             temps.GetComponent<ChangeLevel>().changeLevel(eras[eraNow]);
             freqMeteor = eraMeteor[eraNow];
             freqVolcan = eraVolcan[eraNow];
-                
+                }
 
+
+            }
         }
     }
     void FixedUpdate()
@@ -141,7 +149,8 @@ public class gameManager : MonoBehaviour
         }
 
         if (energy < 0) energy = 0;
-        barre.value = Mathf.Pow(energy / maxEnergy,2) ;
+
+        if (!Menu) barre.value = Mathf.Pow(energy / maxEnergy,2) ;
 
     }
     void InvokeMeteor ()
