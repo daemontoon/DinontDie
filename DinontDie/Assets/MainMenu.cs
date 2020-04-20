@@ -7,6 +7,10 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public Image fade;
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
     public void PlayGame ()
     {
 

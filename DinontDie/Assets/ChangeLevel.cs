@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -9,7 +10,8 @@ public class ChangeLevel : MonoBehaviour
     public static bool levelChanging = false;
     public GameObject pauseMenuUI;
     public TMP_Text titreEpoque;
-
+    public Sprite[] visuel;
+    public Image level;
     // Update is called once per frame
 
 
@@ -53,11 +55,11 @@ public class ChangeLevel : MonoBehaviour
         }
     }
 
-    public void changeLevel(string numero)
+    public void changeLevel(int numero)
     {
 
         Debug.Log("LOL");
-        titreEpoque.SetText(numero);
+        level.sprite = visuel[numero-1];
         DestroyAll("Meteor");
         DestroyAll("Volcan");
         Pause();

@@ -37,7 +37,9 @@ public class WinMenu : MonoBehaviour
     }
     public void LoadMenu()
     {
+        pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        GameIsEnd = false;
         SceneManager.LoadScene("TitleScreen");
     }
     public void QuitGame()
