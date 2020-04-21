@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1f;
+        AudioListener.pause = false;
     }
     public void PlayGame ()
     {

@@ -21,7 +21,7 @@ public class SliderScript : MonoBehaviour
         if (decreasePoint >= totalShakeDuration)
         {
             Debug.LogError("decreasePoint must be less than totalShakeDuration...Exiting");
-            yield break; //Exit!
+            decreasePoint = totalShakeDuration;
         }
 
         //Get Original Pos and rot
@@ -126,7 +126,15 @@ public class SliderScript : MonoBehaviour
         if (GetComponent<Slider>().value < 0.33)
         {
 
-            if(GetComponent<Slider>().value < 0.15) shakeGameObject(gameObject, Time.deltaTime, Time.deltaTime/1000, true, (0.15f-GetComponent<Slider>().value));
+            if (GetComponent<Slider>().value < 0.15 && GetComponent<Slider>().value >= 0.05)
+            {
+                shakeGameObject(gameObject, Time.deltaTime, Time.deltaTime / 1000, true, (0.15f - GetComponent<Slider>().value));
+            }
+            if (GetComponent<Slider>().value < 0.05)
+            {
+                shakeGameObject(gameObject, Time.deltaTime, Time.deltaTime / 1000, true, 2);
+            }
+
 
             img.color = new Color(baseColor.r +(1f - 3f*GetComponent<Slider>().value), baseColor.g * 3f*GetComponent<Slider>().value, baseColor.b *3f*GetComponent<Slider>().value, 1);
         }

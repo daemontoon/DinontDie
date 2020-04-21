@@ -25,6 +25,7 @@ public class ChangeLevel : MonoBehaviour
     }
     public void Resume()
     {
+        AudioListener.pause = false;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         levelChanging = false;
@@ -32,6 +33,7 @@ public class ChangeLevel : MonoBehaviour
 
     void Pause()
     {
+        AudioListener.pause = true;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         levelChanging = true;

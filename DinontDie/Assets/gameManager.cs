@@ -40,6 +40,8 @@ public class gameManager : MonoBehaviour
     public int[] erasTime = new int[] { -5000, 250, 1450, 1780, 2020, 150000000 };
     public bool win = false;
 
+
+
     // Start is called before the first frame update
     void Start()
     {

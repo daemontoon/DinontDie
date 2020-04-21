@@ -19,6 +19,7 @@ public class MenuLoose : MonoBehaviour
     }
     public void EndResume()
     {
+        AudioListener.pause = false;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsEnd = false;
@@ -26,6 +27,7 @@ public class MenuLoose : MonoBehaviour
 
     void EndPause()
     {
+        AudioListener.pause = true;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsEnd = true;
