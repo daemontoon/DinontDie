@@ -150,7 +150,7 @@ public class gameManager : MonoBehaviour
 
         if (energy < 0) energy = 0;
 
-        if (!Menu) barre.value = Mathf.Pow(energy / maxEnergy,2) ;
+        if (!Menu) barre.value = energy/maxEnergy ;
 
     }
     void InvokeMeteor ()

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MetorScript : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class MetorScript : MonoBehaviour
     SpriteRenderer spriteMeteor;
     CapsuleCollider2D colliderMeteor;
     List<GameObject> TriggerList = new List<GameObject>();
+    public AudioSource son;
+    public AudioMixerGroup mixerGroup;
+    public AudioClip[] listSon;
+
     void Awake()
     {
         animMeteor = gameObject.transform.GetComponentInChildren<Animator>();
@@ -16,7 +21,11 @@ public class MetorScript : MonoBehaviour
         spriteMeteor.sortingOrder = 3;
         colliderMeteor = GetComponent<CapsuleCollider2D>();
         colliderMeteor.enabled = !colliderMeteor.enabled;
-      //  FindObjectOfType<AudioManager>().Play("MeteorCrash");
+        son.outputAudioMixerGroup = mixerGroup;
+        son.clip = listSon[Random.Range(0, 3)];
+        son.PlayDelayed(0.6f);
+
+        //  FindObjectOfType<AudioManager>().Play("MeteorCrash");
     }
 
     /* private void OnTriggerEnter2D(Collider2D other)

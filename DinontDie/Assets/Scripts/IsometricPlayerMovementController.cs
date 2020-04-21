@@ -23,6 +23,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     public Animator animDino;
 
+
     bool isdying;
     float energy;
 

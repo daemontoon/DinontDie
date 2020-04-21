@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class VolcanScript : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class VolcanScript : MonoBehaviour
     SpriteRenderer spriteVolcan;
     SpriteRenderer spriteLava;
     float countBig = 0f;
+    public AudioSource son;
+    public AudioMixerGroup mixerGroup;
 
     void Awake()
     {
@@ -24,6 +27,8 @@ public class VolcanScript : MonoBehaviour
         colliderVolcanBig = GetComponent<CircleCollider2D>();
         colliderVolcan.enabled = !colliderVolcan.enabled;
         colliderVolcanBig.enabled = !colliderVolcanBig.enabled;
+        son.outputAudioMixerGroup = mixerGroup;
+        son.PlayDelayed(0.5f);
         //FindObjectOfType<AudioManager>().Play("Volcano");
     }
 

@@ -40,7 +40,7 @@ public class AudioManager : MonoBehaviour
     }
     void Start()
     {
-        Play("LevelTheme");
+        //Play("LevelTheme");
     }
 
     public void Play(string name    )

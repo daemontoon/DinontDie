@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AnimationParameters : MonoBehaviour
 {
@@ -10,13 +11,18 @@ public class AnimationParameters : MonoBehaviour
     Vector2 movementValue;
     public bool isMoving;
     int era;
+    public AudioSource son;
+    public AudioMixerGroup mixerGroup;
+    bool joue = false;
 
     // Start is called before the first frame update
     private void Start()
     {
-   
+        
+        son.outputAudioMixerGroup = mixerGroup;
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
@@ -29,11 +35,20 @@ public class AnimationParameters : MonoBehaviour
         if (movementValue != new Vector2(0,0))
         { 
             isMoving = true;
-          //  FindObjectOfType<AudioManager>().Play("Stomping");
+            Debug.Log("go");
+            if (joue == false)
+            {
+                if (!son.isPlaying) son.Play();
+                joue = true;
+            }
+
         }
         else
         {
             isMoving = false;
+            if (son.isPlaying) son.Stop();
+            joue = false;
+           // GameObject.Find("AudioManager").GetComponent<AudioManager>().("AnimDino");
         }
         animator.SetBool("isMoving", isMoving);
 
