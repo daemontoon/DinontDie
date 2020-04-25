@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioSource audioSource;
+
     public Image fade;
     private void Awake()
     {
@@ -14,7 +16,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame ()
     {
-
+        StartCoroutine(FadeAudioSource.StartFade(audioSource, 2, 0));
 
         StartCoroutine(FadeImage());
 
@@ -28,7 +30,23 @@ public class MainMenu : MonoBehaviour
             
         }
     }
+    public static class FadeAudioSource
+    {
 
+        public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
+        {
+            float currentTime = 0;
+            float start = audioSource.volume;
+
+            while (currentTime < duration)
+            {
+                currentTime += Time.deltaTime;
+                audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+                yield return null;
+            }
+            yield break;
+        }
+    }
     IEnumerator FadeImage()
     {
         // fade from opaque to transparent

@@ -43,7 +43,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c52940b6b3f15aa4bbf8092c45910e0d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -244,9 +244,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.601043, y: 0}
   serializedVersion: 2
-  m_Radius: 0.98499995
+  m_Radius: 1.5860429
 --- !u!111 &3731147699807696936
 Animation:
   m_ObjectHideFlags: 0
@@ -431,6 +431,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14836162, y: -0.3350871}
-  m_Size: {x: 3.82632, y: 2.2182367}
+  m_Offset: {x: -0.34155223, y: -0.056032803}
+  m_Size: {x: 3.955161, y: 2.1753485}
   m_Direction: 1

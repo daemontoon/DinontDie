@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIvaleur: {fileID: 0}
-  movementSpeed: 1.25
+  movementSpeed: 1.5
   idleTimer: 0
   independance: 2
   mousePos: {x: 0, y: 0}

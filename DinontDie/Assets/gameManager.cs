@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Audio;
 
 public class gameManager : MonoBehaviour
 {
@@ -40,6 +41,8 @@ public class gameManager : MonoBehaviour
     public int[] erasTime = new int[] { -5000, 250, 1450, 1780, 2020, 150000000 };
     public bool win = false;
 
+    public AudioSource son;
+    public AudioMixerGroup mixerGroup;
 
 
     // Start is called before the first frame update
@@ -51,7 +54,8 @@ public class gameManager : MonoBehaviour
             freqMeteor = eraMeteor[eraNow];
             freqVolcan = eraVolcan[eraNow];
         }
-
+        son.outputAudioMixerGroup = mixerGroup;
+        son.PlayDelayed(0f);
 
     }
 
@@ -164,5 +168,32 @@ public class gameManager : MonoBehaviour
     {
         Vector2 randomPos = new Vector2(Random.Range(-8.5f, 8.5f), Random.Range(-4f, 3.5f));
         Instantiate(volcanPrefab, new Vector3(randomPos.x, randomPos.y, 0), Quaternion.identity);
+    }
+
+    public void couperSon()
+    {
+        StartCoroutine(FadeAudioS.StartFade(0.5f, 0));
+    }
+    public void ouvrirSon()
+    {
+        StartCoroutine(FadeAudioS.StartFade(0.5f, 1));
+    }
+
+    public static class FadeAudioS
+    {
+
+        public static IEnumerator StartFade(float duration, float targetVolume)
+        {
+            float currentTime = 0;
+            float start = AudioListener.volume;
+
+            while (currentTime < duration)
+            {
+                currentTime += Time.deltaTime;
+                AudioListener.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+                yield return null;
+            }
+            yield break;
+        }
     }
 }
